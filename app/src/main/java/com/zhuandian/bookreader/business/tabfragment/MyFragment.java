@@ -1,6 +1,7 @@
 package com.zhuandian.bookreader.business.tabfragment;
 
 import com.zhuandian.base.BaseFragment;
+import com.zhuandian.bookreader.R;
 
 /**
  * desc :
@@ -10,7 +11,7 @@ import com.zhuandian.base.BaseFragment;
 public class MyFragment extends BaseFragment {
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.fragment_my;
     }
 
     @Override
