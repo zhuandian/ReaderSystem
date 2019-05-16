@@ -27,7 +27,7 @@
         <activity android:name=".business.login.UserRegisterActivity" />
         <activity android:name=".business.BookDetailActivity" />
         <activity android:name=".business.BookReaderActivity" />
-        <activity android:name=".UploadBookActivity" />
+        <activity android:name=".business.UploadBookActivity" />
         <activity android:name=".business.BookCommentActivity"></activity>
     </application>
 

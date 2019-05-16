@@ -1,9 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UploadBookActivity">
+    android:background="#fff"
+    android:clickable="true"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+
+            <!--<include layout="@layout/divider_line"/>-->
+            <EditText
+                android:id="@+id/blog_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_background"
+                android:gravity="left|center"
+                android:hint="文章标题..."
+                android:lines="12"
+                android:paddingLeft="10dp"
+                android:textColor="#515151"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/blog_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_background"
+                android:gravity="left"
+                android:hint="文章内容..."
+                android:lines="12"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textColor="#515151"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/commit_content"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="发布文章"
+                android:textColor="#f00" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.zhuandian.base.BaseFragment;
 import com.zhuandian.bookreader.MainActivity;
 import com.zhuandian.bookreader.R;
+import com.zhuandian.bookreader.business.UploadBookActivity;
 import com.zhuandian.bookreader.business.login.LoginActivity;
 import com.zhuandian.utils.AppManager;
 
@@ -49,6 +50,7 @@ public class MyFragment extends BaseFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_upload_book:
+                startActivity(new Intent(actitity,UploadBookActivity.class));
                 break;
             case R.id.tv_my_book:
                 ((MainActivity) actitity).setCurrentPage(2);
