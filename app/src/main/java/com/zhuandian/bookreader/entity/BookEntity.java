@@ -13,7 +13,25 @@ public class BookEntity extends BmobObject {
     private String bookDesc;
     private String bookImgUrl;
     private int bookPrice;
+    private String bookContent;
     private String bookType;
+    private UserEntity userEntity;
+
+    public UserEntity getUserEntity() {
+        return userEntity;
+    }
+
+    public void setUserEntity(UserEntity userEntity) {
+        this.userEntity = userEntity;
+    }
+
+    public String getBookContent() {
+        return bookContent;
+    }
+
+    public void setBookContent(String bookContent) {
+        this.bookContent = bookContent;
+    }
 
     public int getBookPrice() {
         return bookPrice;

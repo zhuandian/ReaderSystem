@@ -3,31 +3,24 @@ package com.zhuandian.bookreader.business.tabfragment;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zhuandian.base.BaseFragment;
-import com.zhuandian.bookreader.BookDetailActivity;
-import com.zhuandian.bookreader.MainActivity;
+import com.zhuandian.bookreader.business.BookDetailActivity;
 import com.zhuandian.bookreader.R;
 import com.zhuandian.bookreader.adapter.BookListAdapter;
-import com.zhuandian.bookreader.business.login.LoginActivity;
 import com.zhuandian.bookreader.entity.BookEntity;
 
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;

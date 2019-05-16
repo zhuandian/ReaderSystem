@@ -11,15 +11,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".business.login.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".business.login.LoginActivity" />
         <activity android:name=".business.login.UserRegisterActivity" />
-        <activity android:name=".BookDetailActivity"></activity>
+        <activity android:name=".business.BookDetailActivity" />
+        <activity android:name=".business.BookReaderActivity" />
+        <activity android:name=".UploadBookActivity" />
+        <activity android:name=".business.BookCommentActivity"></activity>
     </application>
 
 </manifest>

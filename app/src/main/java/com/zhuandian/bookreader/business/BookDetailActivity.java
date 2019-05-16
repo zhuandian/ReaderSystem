@@ -1,17 +1,16 @@
-package com.zhuandian.bookreader;
+package com.zhuandian.bookreader.business;
 
-import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.zhuandian.base.BaseActivity;
+import com.zhuandian.bookreader.R;
 import com.zhuandian.bookreader.entity.BookEntity;
 import com.zhuandian.bookreader.entity.UserEntity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
@@ -47,7 +46,7 @@ public class BookDetailActivity extends BaseActivity {
     }
 
 
-    @OnClick(R.id.tv_add_book)
+    @OnClick({R.id.tv_add_book})
     public void onClick() {
         if (bookEntity.getBookState() == 1) {
             Toast.makeText(this, "改书已在书单中...", Toast.LENGTH_SHORT).show();

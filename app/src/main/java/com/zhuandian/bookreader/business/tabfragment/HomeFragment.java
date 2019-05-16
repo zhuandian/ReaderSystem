@@ -1,30 +1,22 @@
 package com.zhuandian.bookreader.business.tabfragment;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.zhuandian.base.BaseFragment;
-import com.zhuandian.bookreader.BookDetailActivity;
+import com.zhuandian.bookreader.business.BookDetailActivity;
 import com.zhuandian.bookreader.R;
 import com.zhuandian.bookreader.Utils.GlideImageLoader;
 import com.zhuandian.bookreader.adapter.BookListAdapter;
 import com.zhuandian.bookreader.entity.BookEntity;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;

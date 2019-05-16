@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_book_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="哈哈哈"
+                android:textSize="65sp" />
+
+            <TextView
+                android:id="@+id/tv_book_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="辅导教师开发都是快交房的困了就睡 风刀霜剑开发了的数据库了就克劳福德数据库里风口浪尖荆防颗粒都是交付考虑到数据库结款了打发时间艾迪康刻录机的分散就安分经典款了接口路径的发生 "
+                android:textSize="45sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:text="读完可得 10 积分"
+                android:textColor="#ff4400" />
+
+            <TextView
+                android:id="@+id/tv_get_score"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="20dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="领取积分"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="20dp"
+        android:src="@drawable/heart_share_pen"
+        app:backgroundTint="#f9b1b107" />
+</RelativeLayout>
