@@ -45,6 +45,7 @@ public class HomeFragment extends BaseFragment {
 
     private void initHotBook() {
         BmobQuery<BookEntity> query = new BmobQuery<>();
+        query.setLimit(3);
         query.findObjects(new FindListener<BookEntity>() {
             @Override
             public void done(final List<BookEntity> list, BmobException e) {

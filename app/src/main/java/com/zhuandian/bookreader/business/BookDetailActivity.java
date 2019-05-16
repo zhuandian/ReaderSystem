@@ -71,6 +71,8 @@ public class BookDetailActivity extends BaseActivity {
                         }
                     }
                 });
+            }else {
+                Toast.makeText(BookDetailActivity.this, "抱歉，积分不足，无法兑换...", Toast.LENGTH_SHORT).show();
             }
         }
     }

@@ -52,6 +52,12 @@ public class BookShopFragment extends BaseFragment {
         initBookList();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        initBookList();
+    }
+
     private void initBookList() {
         BmobQuery<BookEntity> query = new BmobQuery<>();
         if (isLimit)

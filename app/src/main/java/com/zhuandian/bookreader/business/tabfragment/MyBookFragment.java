@@ -34,6 +34,12 @@ public class MyBookFragment extends BaseFragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        initBookList();
+    }
+
+    @Override
     protected void initView() {
         initBookList();
     }
