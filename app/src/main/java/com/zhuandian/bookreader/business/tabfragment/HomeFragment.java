@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.zhuandian.base.BaseFragment;
+import com.zhuandian.bookreader.BookDetailActivity;
 import com.zhuandian.bookreader.R;
 import com.zhuandian.bookreader.Utils.GlideImageLoader;
 import com.zhuandian.bookreader.adapter.BookListAdapter;
@@ -60,14 +61,9 @@ public class HomeFragment extends BaseFragment {
                 rvList.setAdapter(new BookListAdapter(list, new BookListAdapter.OnStateTextClickListener() {
                     @Override
                     public void onClick(BookEntity bookEntity) {
-//                        Intent intent = new Intent(actitity, SearchResultActivity.class);
-//                        intent.putExtra("entity", bookEntity);
-//                        startActivity(intent);
-                    }
-
-                    @Override
-                    public void onClickBorrow(BookEntity bookEntity) {
-
+                        Intent intent = new Intent(actitity, BookDetailActivity.class);
+                        intent.putExtra("entity", bookEntity);
+                        startActivity(intent);
                     }
                 }));
 

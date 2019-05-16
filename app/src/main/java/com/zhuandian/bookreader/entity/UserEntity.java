@@ -9,6 +9,15 @@ import cn.bmob.v3.BmobUser;
 public class UserEntity extends BmobUser {
     private String nikeName;
     private String userInfo;
+    private int userMoney; //用户积分
+
+    public int getUserMoney() {
+        return userMoney;
+    }
+
+    public void setUserMoney(int userMoney) {
+        this.userMoney = userMoney;
+    }
 
     public String getNikeName() {
         return nikeName;

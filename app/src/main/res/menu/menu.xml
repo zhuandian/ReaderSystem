@@ -6,14 +6,15 @@
         android:id="@+id/tab_home"
         android:icon="@drawable/ic_home"
         android:title="首页" />
-    <item
-        android:id="@+id/tab_book"
-        android:icon="@drawable/ic_view"
-        android:title="书单" />
+
     <item
         android:id="@+id/tab_shop"
         android:icon="@drawable/ic_hotel"
         android:title="商城" />
+    <item
+        android:id="@+id/tab_book"
+        android:icon="@drawable/ic_view"
+        android:title="书单" />
     <item
         android:id="@+id/tab_my"
         android:enabled="true"

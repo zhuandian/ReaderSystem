@@ -52,11 +52,10 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BooKVi
     public void onBindViewHolder(@NonNull BookListAdapter.BooKViewHolder viewHolder, final int i) {
         Glide.with(context).load(mDatas.get(i).getBookImgUrl()).into(viewHolder.ivBookImg);
         viewHolder.tvBookName.setText(mDatas.get(i).getBookName());
-        viewHolder.tvBookState.setText(mDatas.get(i).getBookState() == 1 ? "还书" : "未借");
         viewHolder.tvBookDesc.setText(mDatas.get(i).getBookDesc());
         viewHolder.tvBookTime.setText(mDatas.get(i).getCreatedAt());
-        viewHolder.tvBookBorrow.setVisibility(mDatas.get(i).getBookState() == 1 ? View.VISIBLE : View.GONE);
-        viewHolder.tvBookState.setOnClickListener(new View.OnClickListener() {
+        viewHolder.tvBookPrice.setText(mDatas.get(i).getBookPrice()+" 积分");
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (stateTextClickListener != null) {
@@ -64,14 +63,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BooKVi
                 }
             }
         });
-        viewHolder.tvBookBorrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (stateTextClickListener != null) {
-                    stateTextClickListener.onClickBorrow(mDatas.get(i));
-                }
-            }
-        });
+
     }
 
     @Override
@@ -88,12 +80,9 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BooKVi
         TextView tvBookDesc;
         @BindView(R.id.tv_book_time)
         TextView tvBookTime;
-        @BindView(R.id.tv_book_state)
-        TextView tvBookState;
-        @BindView(R.id.tv_book_borrow)
-        TextView tvBookBorrow;
-        @BindView(R.id.tv_book_sold_out)
-        TextView tvBookSoldOut;
+        @BindView(R.id.tv_book_price)
+        TextView tvBookPrice;
+
 
         public BooKViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -103,8 +92,5 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BooKVi
 
     public interface OnStateTextClickListener {
         void onClick(BookEntity bookEntity);
-
-        void onClickBorrow(BookEntity bookEntity);
-
     }
 }

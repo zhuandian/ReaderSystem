@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".business.login.LoginActivity" />
         <activity android:name=".business.login.UserRegisterActivity" />
+        <activity android:name=".BookDetailActivity"></activity>
     </application>
 
 </manifest>

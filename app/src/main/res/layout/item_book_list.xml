@@ -44,41 +44,19 @@
         android:text="2019/02/28"
         android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/tv_book_borrow"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:layout_toLeftOf="@+id/tv_book_state"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:text="续借"
-        android:textColor="@color/white" />
+
 
     <TextView
-        android:id="@+id/tv_book_state"
+        android:id="@+id/tv_book_price"
         android:layout_width="50dp"
         android:layout_height="30dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
-        android:background="@color/colorAccent"
         android:gravity="center"
-        android:text="状态"
-        android:textColor="@color/white" />
+        android:text="12 积分"
+        android:textColor="#ff4400" />
 
 
-    <TextView
-        android:id="@+id/tv_book_sold_out"
-        android:layout_width="60dp"
-        android:visibility="gone"
-        android:layout_height="40dp"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_margin="20dp"
-        android:background="#999999"
-        android:gravity="center"
-        android:text="已报废"
-        android:textColor="@color/white" />
+
 </RelativeLayout>
