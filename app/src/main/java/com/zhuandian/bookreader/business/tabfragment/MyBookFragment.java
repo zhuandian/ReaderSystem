@@ -46,6 +46,7 @@ public class MyBookFragment extends BaseFragment {
 
     private void initBookList() {
         BmobQuery<BookEntity> query = new BmobQuery<>();
+        query.order("-updatedAt");
         query.addWhereEqualTo("bookState", 1).
                 findObjects(new FindListener<BookEntity>() {
                     @Override

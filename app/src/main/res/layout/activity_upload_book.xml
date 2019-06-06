@@ -21,6 +21,12 @@
             android:background="#ffffff"
             android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/iv_book"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add_new_picture_fab_btn" />
 
             <!--<include layout="@layout/divider_line"/>-->
             <EditText
@@ -68,10 +74,11 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_upload_book"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="发布文章"
+                android:text="上传小说"
                 android:textColor="#f00" />
         </LinearLayout>
 

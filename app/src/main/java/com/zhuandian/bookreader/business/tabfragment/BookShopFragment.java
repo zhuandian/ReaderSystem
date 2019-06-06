@@ -62,6 +62,7 @@ public class BookShopFragment extends BaseFragment {
         BmobQuery<BookEntity> query = new BmobQuery<>();
         if (isLimit)
             query.addWhereEqualTo("bookType", bookType);
+        query.order("-updatedAt");
         query.findObjects(new FindListener<BookEntity>() {
             @Override
             public void done(final List<BookEntity> list, BmobException e) {
@@ -89,16 +90,39 @@ public class BookShopFragment extends BaseFragment {
                 String bookName = etBookName.getText().toString();
                 if (TextUtils.isEmpty(bookName)) {
                     Toast.makeText(actitity, "请输入类别...", Toast.LENGTH_SHORT).show();
+                    isLimit = false;
+                    initBookList();
+
                 } else {
-//                    Intent intent = new Intent(HomeActivity.this, BookListActivity.class);
-//                    intent.putExtra("bookType", bookName);
-//                    startActivity(intent);
+                    initBookList(bookName);
                 }
                 break;
             case R.id.tv_categary:
                 showBookCateGaryDialog();
                 break;
         }
+    }
+
+    private void initBookList(String bookName) {
+        BmobQuery<BookEntity> query = new BmobQuery<>();
+        query.addWhereEqualTo("bookName", bookName);
+        query.findObjects(new FindListener<BookEntity>() {
+            @Override
+            public void done(final List<BookEntity> list, BmobException e) {
+                rvList.setLayoutManager(new LinearLayoutManager(actitity));
+                BookListAdapter bookListAdapter = new BookListAdapter(list, new BookListAdapter.OnStateTextClickListener() {
+                    @Override
+                    public void onClick(BookEntity bookEntity) {
+                        Intent intent = new Intent(actitity, BookDetailActivity.class);
+                        intent.putExtra("entity", bookEntity);
+                        startActivity(intent);
+                    }
+                });
+                rvList.setAdapter(bookListAdapter);
+                bookListAdapter.notifyDataSetChanged();
+
+            }
+        });
     }
 
     private void showBookCateGaryDialog() {
