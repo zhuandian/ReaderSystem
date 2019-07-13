@@ -9,4 +9,5 @@ public class Constant {
 
     public static final int LOGIN_SUCCESS = 1; //登陆成功
     public static final int REQUSET_LOGIN = 2; //请求登陆
+    public static String URL="";
 }
