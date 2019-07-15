@@ -2,6 +2,8 @@ package com.zhuandian.bookreader;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.zhuandian.base.BaseActivity;
 import com.zhuandian.bookreader.Utils.Constant;
@@ -19,6 +21,8 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         return R.layout.activity_splash;
     }
 
