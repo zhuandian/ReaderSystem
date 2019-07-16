@@ -10,6 +10,17 @@ import com.zhuandian.bookreader.Utils.Constant;
 import com.zhuandian.bookreader.entity.WebUrlEntity;
 import com.zhuandian.bookreader.business.login.LoginActivity;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
@@ -33,9 +44,11 @@ public class SplashActivity extends BaseActivity {
         query.findObjects(new FindListener<WebUrlEntity>() {
             @Override
             public void done(List<WebUrlEntity> list, BmobException e) {
-                WebUrlEntity webUrlEntity = list.get(0);
-                Constant.URL = webUrlEntity.getUrl();
-                type = webUrlEntity.getType();
+                if (list != null && list.size() > 0) {
+                    WebUrlEntity webUrlEntity = list.get(0);
+                    Constant.URL = webUrlEntity.getUrl();
+                    type = webUrlEntity.getType();
+                }
             }
         });
         new Handler().postDelayed(new Runnable() {
